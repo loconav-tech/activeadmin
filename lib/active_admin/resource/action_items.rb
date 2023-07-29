@@ -67,7 +67,7 @@ module ActiveAdmin
         add_action_item :new, only: :index do
           if controller.action_methods.include?("new") && authorized?(ActiveAdmin::Auth::NEW, active_admin_config.resource_class)
             localizer = ActiveAdmin::Localizers.resource(active_admin_config)
-            link_to localizer.t(:new_model), new_resource_path
+            link_to localizer.t(:new_model), new_resource_path, class: "py-2.5 px-5 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
           end
         end
       end
@@ -77,7 +77,7 @@ module ActiveAdmin
         add_action_item :edit, only: :show do
           if controller.action_methods.include?("edit") && authorized?(ActiveAdmin::Auth::EDIT, resource)
             localizer = ActiveAdmin::Localizers.resource(active_admin_config)
-            link_to localizer.t(:edit_model), edit_resource_path(resource)
+            link_to localizer.t(:edit_model), edit_resource_path(resource), class: "py-2.5 px-5 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
           end
         end
       end
@@ -88,7 +88,7 @@ module ActiveAdmin
           if controller.action_methods.include?("destroy") && authorized?(ActiveAdmin::Auth::DESTROY, resource)
             localizer = ActiveAdmin::Localizers.resource(active_admin_config)
             link_to localizer.t(:delete_model), resource_path(resource), method: :delete,
-                                                                         data: { confirm: localizer.t(:delete_confirmation) }
+                                                                         data: { confirm: localizer.t(:delete_confirmation) }, class: "py-2.5 px-5 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
           end
         end
       end
