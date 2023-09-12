@@ -1,3 +1,5 @@
+//= depend_on_asset "active_admin/nested_menu_arrow.gif"
+//= depend_on_asset "active_admin/nested_menu_arrow_dark.gif"
 // ----------------------------------- Header
 #header {
   @include primary-gradient;
@@ -78,12 +80,12 @@
       }
 
       &.has_nested > a {
-        background: url($menu-arrow-light-icon-url) no-repeat calc(100% - 7px) 50%;
+        background: image-url('active_admin/nested_menu_arrow.gif') no-repeat calc(100% - 7px) 50%;
         padding-right: 20px;
       }
 
       &.has_nested.current > a {
-        background: $current-menu-item-background url($menu-arrow-dark-icon-url) no-repeat calc(100% - 7px) 50%;
+        background: $current-menu-item-background image-url('active_admin/nested_menu_arrow_dark.gif') no-repeat calc(100% - 7px) 50%;
         padding-right: 20px;
       }
 
@@ -95,7 +97,7 @@
       &.has_nested:hover > a {
         @include rounded-top(10px);
         border-bottom: 5px solid $hover-menu-item-background;
-        background: $hover-menu-item-background url($menu-arrow-dark-icon-url) no-repeat calc(100% - 7px) 50%;
+        background: $hover-menu-item-background image-url('active_admin/nested_menu_arrow_dark.gif') no-repeat calc(100% - 7px) 50%;
         z-index: 1020;
       }
 
@@ -117,7 +119,7 @@
         z-index: 1010;
 
         li {
-          position: relative;
+          position: relative
           margin: 0px;
           a {
             background: none;
@@ -162,6 +164,7 @@
         }
       }
     }
+
   }
 
   #tabs {
